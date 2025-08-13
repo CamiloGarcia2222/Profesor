@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    let tareas = [];
+    let opcion;
+
+    for (;;) {
+      
+      opcion = prompt(
+        "=== Lista de tareas ===\n" +
+        "1. Ver tareas\n" +
+        "2. Añadir tarea\n" +
+        "3. Marcar tarea como completada\n" +
+        "4. Eliminar tarea\n" +
+        "5. Salir\n" +
+        "Elige una opción:"
+      );
+      console.log(`la opcion elegida es ${opcion}`);
+
+      if (opcion === "1") {
+        console.log("La opcion seleccionada es VER TAREA");
+        for(let i=0; i<tareas.length; i ++){
+          console.log(`${i} - ${tareas[i]}`);
+        }
+      } 
+      else if (opcion === "2") {
+        console.log("La opcion seleccionada es AÑADIR TAREAS");
+        let tareaNueva = prompt("Escribe la nueva tarea: ")
+        tareas.push(tareaNueva);
+      } 
+      else if (opcion === "3") {
+        console.log("La opcion seleccionada es MARCAR TAREA COMO COMPLETADA");
+        let tareaHecha = Number(prompt("Indica el numero de la tarea realizada"))
+        tareas[tareaHecha] += " - HECHO";
+      } 
+      else if (opcion === "4") {
+        console.log("La opcion seleccionada es ELIMINAR TAREA");
+        let tareaEliminada = Number(prompt("Indica la tarea a eliminar "))
+        tareas.splice(tareaEliminada,1);
+      }
+      else if (opcion === "5") {
+        console.log("Saliendo del programa...");
+        break;
+      } 
+      else {
+        console.log("Elige una opcion válida.");
+      }
+    }
+  </script>
+
+</body>
+
+</html>
