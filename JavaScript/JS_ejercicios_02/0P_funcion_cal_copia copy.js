@@ -8,27 +8,38 @@ Realiza una serie de llamadas a la función calculadora para probar su funcionam
 */
 
 function sumar(a, b){
-    return a + b
+    return a + b; 
 }
 function restar(a, b){
-    return a - b
+    return a - b; 
 }
 function multiplicar(a, b){
-    return a * b
+    return a * b; 
 }
-function dividir (a, b){
-    if(b === 0){
-        return "ERROR NO SE PUEDE DIVIDIR PORQUE EL SEGUNDO NUMERO ES 0"
-    }return a / b
+function dividir(a, b){
+    return a / b; 
 }
-function calculadora (operacion, a, b){
-    if( operacion === "+")
-        return sumar (a, b);
+
+function calculadora(operacion, a, b){
+    if(operacion === "+"){
+        return sumar (a, b)
+    }
     else if (operacion === "-"){
-        return restar (a, b);
-    }else if (operacion === "*"){
-        return multiplicar (a, b)
-    }else if (operacion === "/"){
-        return dividir(a, b)
+        return restar (a, b)
+
+    }
+    else if (operacion === "*"){
+        return multiplicar (a, b) 
+    }
+    else if (operacion === "/"){
+        return dividir (a, b)
+    }
+    else{
+        console.error("La operacion es erronea")
+        return;
     }
 }
+
+let resultado = calculadora ("*", 123, 129);
+console.log(resultado);
+

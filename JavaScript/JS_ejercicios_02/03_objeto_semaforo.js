@@ -7,3 +7,9 @@ El método cambiar debe pasar de rojo a verde, de verde a amarillo y de amarillo
 El método mostrar() debe mostrar el estado actual del semáforo.
 Realiza una serie de llamadas a los métodos para probar su funcionamiento.
 */
+
+let semaforo = {
+    estado: "Amarillo",
+    ubicacion: "Calle Falsa 123",
+    cambiar: function(semaforo){
+}

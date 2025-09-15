@@ -6,3 +6,26 @@ Si la energía es 0 no se puede jugar y si es 100 no se puede dormir.
 Por último, crea un método estado() que muestre el estado de la mascota (nombre y energía).
 Realiza una serie de llamadas a los métodos para probar su funcionamiento.
 */
+
+let mascota = {
+    nombre: "Sonya",
+    energia: 70,
+    jugar: function(minutos){
+        this.energia -= minutos * 2
+        if(this.energia === 0){
+            console.log(this.nombre + "tiene que dormir");
+        }else if (this.energia <=50){
+            console.log(this.nombre + "Tiene poca energia ");
+            
+        }
+    },
+    dormir: function(horas){
+        this.energia += horas * 10
+    }, 
+    estado: function(){  
+        console.log(`La mascota ${this.nombre} tiene ${this.energia} de energía`)
+    }
+}
+
+
+

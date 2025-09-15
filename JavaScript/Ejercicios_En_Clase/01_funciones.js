@@ -18,18 +18,3 @@ function mostrarParesEntreDosNumeros(inicio, final){
  
 
 //modificar el codigo para en vez de mostrar por pantalla los valores,  genere una lista que tiene que devolver. Necesitas utilizar la funcion push() para lista
-
-function mostrarNumerosPares (empezar, terminar){
-    let GuardarN = []
-    for(let j=empezar; j<=terminar;){
-        if(j % 2 === 0){
-            GuardarN.push(j)
-        }
-    }
-    return GuardarN;
-}
-let Paress = mostrarNumerosPares(30, 60)
-console.log(Paress);
-
-
-

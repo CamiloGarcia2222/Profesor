@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adivinar el Número</title>
+</head>
+
+<body>
+
+  <script>
+    const numeroSecreto = 7;
+    let intentosMaximos = 3;
+    let numeroUsuario;
+    let acertado = false;
+
+    for (let intento = 1; intento <= intentosMaximos; intento++) {
+      numeroUsuario = Number(prompt(`Intento ${intento} de ${intentosMaximos}:\nAdivina el número (1-10)`));
+
+      console.log(`Intento ${intento}: Usuario escribió ${numeroUsuario}`);
+
+      if (numeroUsuario === numeroSecreto) {
+        alert("🎉 ¡Felicidades! Has adivinado el número.");
+        acertado = true;
+        break; // Salimos si acertó
+      } else {
+        alert("❌ Incorrecto. Intenta otra vez.");
+      }
+    }
+
+    if (!acertado) {
+      alert(`😢 Has perdido. El número secreto era ${numeroSecreto}.`);
+    }
+  </script>
+
+</body>
+
+</html>
+

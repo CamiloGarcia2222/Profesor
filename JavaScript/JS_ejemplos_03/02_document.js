@@ -1,12 +1,17 @@
 // getElementById devuelve un solo elemento con el id especificado
 let elemento = document.getElementById("titulo");
+console.log(elemento);
+
 // elemento es un objeto del DOM, podemos acceder a sus propiedades y métodos
 // textContent es una propiedad que devuelve el contenido de texto del elemento
 console.log(elemento.textContent);
+elemento.textContent = "Titulo CEAT"
 
 // getElementsByClassName devuelve una colección de elementos con la clase especificada
 let parrafos = document.getElementsByClassName("parrafo");
 // se trata de una colección HTMLCollection, no un array, pero podemos usar for of
+console.log(parrafos);
+
 for (let parrafo of parrafos) {
   console.log(parrafo.textContent);
 }
@@ -27,3 +32,4 @@ let todosLosParrafos = document.querySelectorAll(".parrafo");
 for (let parrafo of todosLosParrafos) {
   console.log(parrafo.textContent);
 }
+console.log(document)

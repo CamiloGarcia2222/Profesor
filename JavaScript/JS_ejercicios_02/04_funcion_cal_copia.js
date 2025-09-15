@@ -7,28 +7,33 @@ En la division, si el segundo número es 0, la función debe devolver "Error: Di
 Realiza una serie de llamadas a la función calculadora para probar su funcionamiento.
 */
 
-function sumar(a, b){
-    return a + b
+function sumar (a, b){
+    return a + b;
 }
-function restar(a, b){
-    return a - b
+function restar (a, b){
+    return a - b;
 }
-function multiplicar(a, b){
-    return a * b
+function multiplicar (a, b){
+    return a * b;
 }
 function dividir (a, b){
     if(b === 0){
-        return "ERROR NO SE PUEDE DIVIDIR PORQUE EL SEGUNDO NUMERO ES 0"
-    }return a / b
+        return "ERROR NO SE PUEDE DIVIDIUR POR 0"
+    }
+    return a / b;
 }
-function calculadora (operacion, a, b){
-    if( operacion === "+")
-        return sumar (a, b);
+
+function calculadora(operacion, a, b){
+    if(operacion === "+"){
+        return sumar (a, b)
+    }
     else if (operacion === "-"){
-        return restar (a, b);
-    }else if (operacion === "*"){
+        return restar (a, b)
+    }
+     else if (operacion === "*"){
         return multiplicar (a, b)
-    }else if (operacion === "/"){
-        return dividir(a, b)
+    }
+     else if (operacion === "/"){
+        return dividir (a, b)
     }
 }

@@ -2,9 +2,12 @@
 let main = document.getElementById("main-container");
 
 console.log("\nBuscar elementos dentro de un elemento");
+
 // luego buscamos el primer parrafo dentro de ese elemento
 let primerParrafo = main.querySelector(".parrafo");
 console.log(primerParrafo.textContent);
+
+
 
 // luego accedemos a su propiedad children, que devuelve una colección de los elementos hijos
 let hijos = main.children;
